@@ -36,3 +36,16 @@ Github:
 2. Vai trò của github là gì?
 
 - Công cụ cung cấp kho lưu trữ online, quản lỷ source code theo dạng dữ liệu phân tán
+
+Bài tập:
+Tạo 1 folder: "DACK"
+
+- Di chuyển toàn bộ code sản phẩm cuối khóa JSB vào trong folder "DACK"
+- Đẩy toàn bộ code "DACK" lên github
+- Public trang web dự án cuối khóa online (Anh hướng dẫn)
+
+Liệt kê nội dung khóa JSB đã học:
+
+- HTML: div, h1->6, ul,ol,li, img, button, input, p, a, b, i, mark, span
+- CSS:
+- Javascript: Không nhớ gì?
