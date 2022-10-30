@@ -89,24 +89,31 @@ Cho người dùng nhập vào: C,R,U,D trong đó:
 */
 
 let menu = ["khoai tây chiên", "lạc luộc", "kim chi"];
+let input;
+do {
 
-let input = prompt("Mời người dùng nhập vào C,R,U,D").toLocaleLowerCase().trim();
-if (input == "c") {
-  menu.push(prompt("Mời người dùng nhập vào món mới").trim());
+  input = prompt("Mời người dùng nhập vào C,R,U,D").toLocaleLowerCase().trim();
+  if (input == "c") {
+    menu.push(prompt("Mời người dùng nhập vào món mới").trim());
+  }
+  else if (input == "r") {
+    console.log(menu);
+  }
+  else if (input == "u") {
+    let phanTuMuonThayThe = prompt("Mời người dùng nhập vào phần tử muốn thay thế").trim();
+    let ViTriPhanTuMuonThayThe = menu.indexOf(phanTuMuonThayThe);
+    menu[ViTriPhanTuMuonThayThe] = prompt("Mời người dùng nhập vào món ăn mới").trim();
+  }
+  else if (input == "d") {
+    let phanTuMuonXoa = prompt("Mời người dùng nhập vào phần tử muốn xóa").trim();
+    let ViTriPhanTuMuonXoa = menu.indexOf(phanTuMuonXoa);
+    menu.splice(ViTriPhanTuMuonXoa, 1);
+  }
+  else {
+    // alert("Đã thoát chương trình");
+
+  }
+
+  // input = prompt("Mời người dùng nhập vào C,R,U,D").toLocaleLowerCase().trim();
 }
-else if (input == "r") {
-  console.log(menu);
-}
-else if (input == "u") {
-  let phanTuMuonThayThe = prompt("Mời người dùng nhập vào phần tử muốn thay thế").trim();
-  let ViTriPhanTuMuonThayThe = menu.indexOf(phanTuMuonThayThe);
-  menu[ViTriPhanTuMuonThayThe] = prompt("Mời người dùng nhập vào món ăn mới").trim();
-}
-else if (input == "d") {
-  let phanTuMuonXoa = prompt("Mời người dùng nhập vào phần tử muốn xóa").trim();
-  let ViTriPhanTuMuonXoa = menu.indexOf(phanTuMuonXoa);
-  menu.splice(ViTriPhanTuMuonXoa, 1);
-}
-else {
-  alert("Đã thoát chương trình");
-}
+while (input == "c" || input == "r" || input == "u" || input == "d");
