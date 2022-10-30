@@ -88,32 +88,88 @@ Cho người dùng nhập vào: C,R,U,D trong đó:
 => xóa món đó trong menu.
 */
 
-let menu = ["khoai tây chiên", "lạc luộc", "kim chi"];
-let input;
-do {
+// let menu = ["khoai tây chiên", "lạc luộc", "kim chi"];
+// let input;
+// do {
+//   input = prompt("Mời người dùng nhập vào C,R,U,D").toLocaleLowerCase().trim();
+//   if (input == "c") {
+//     menu.push(prompt("Mời người dùng nhập vào món mới").trim());
+//   }
+//   else if (input == "r") {
+//     console.log(menu);
+//   }
+//   else if (input == "u") {
+//     let phanTuMuonThayThe = prompt("Mời người dùng nhập vào phần tử muốn thay thế").trim();
+//     let ViTriPhanTuMuonThayThe = menu.indexOf(phanTuMuonThayThe);
+//     menu[ViTriPhanTuMuonThayThe] = prompt("Mời người dùng nhập vào món ăn mới").trim();
+//   }
+//   else if (input == "d") {
+//     let phanTuMuonXoa = prompt("Mời người dùng nhập vào phần tử muốn xóa").trim();
+//     let ViTriPhanTuMuonXoa = menu.indexOf(phanTuMuonXoa);
+//     menu.splice(ViTriPhanTuMuonXoa, 1);
+//   }
+//   else {
+//     alert("Sai cú pháp, thoát chương trình");
+//   }
 
-  input = prompt("Mời người dùng nhập vào C,R,U,D").toLocaleLowerCase().trim();
-  if (input == "c") {
-    menu.push(prompt("Mời người dùng nhập vào món mới").trim());
-  }
-  else if (input == "r") {
-    console.log(menu);
-  }
-  else if (input == "u") {
-    let phanTuMuonThayThe = prompt("Mời người dùng nhập vào phần tử muốn thay thế").trim();
-    let ViTriPhanTuMuonThayThe = menu.indexOf(phanTuMuonThayThe);
-    menu[ViTriPhanTuMuonThayThe] = prompt("Mời người dùng nhập vào món ăn mới").trim();
-  }
-  else if (input == "d") {
-    let phanTuMuonXoa = prompt("Mời người dùng nhập vào phần tử muốn xóa").trim();
-    let ViTriPhanTuMuonXoa = menu.indexOf(phanTuMuonXoa);
-    menu.splice(ViTriPhanTuMuonXoa, 1);
-  }
-  else {
-    // alert("Đã thoát chương trình");
+//   // input = prompt("Mời người dùng nhập vào C,R,U,D").toLocaleLowerCase().trim();
+// }
+// while (input == "c" || input == "r" || input == "u" || input == "d");
 
-  }
 
-  // input = prompt("Mời người dùng nhập vào C,R,U,D").toLocaleLowerCase().trim();
+////// Function: Giới thiệu về hàm
+/*
+- Hàm là 1 chuong trình con được định nghĩa ra để xử lý tính năng mình muốn
+- Hàm có thể tận dụng lại vô số lần
+- Tối ưu code rất nhiều
+*/
+
+//// Khai báo hàm: 
+// function sum() {
+//   alert("Đây là khai báo hàm không tham số")
+// }
+
+// // chạy hàm
+// sum();
+
+//// Khai báo hàm có tham số
+// function sum(a, b) {
+//   console.log(a + b);
+// }
+// sum(1, 2); // 3
+
+////// Khai báo hàm có trả về giá trị:
+// function sum(a, b) {
+//   return a + b;
+// }
+// console.log(
+//   sum(3, 4)
+// );
+
+
+/*
+Bài toán: 
+In ra các số nguyên tố từ 1 => 10 biết: 
+- Số nguyên tố là số chia hết cho 1 và chính nó
+- In ra dưới dạng danh sách (arrray)
+*/
+function snt() {
+  // Xây dựng bài toán
+  let danhSachSnt = []
+  for (let i = 2; i <= 10; i++) {
+    let dem = 0;
+    for (let j = 1; j < i; j++) {
+      if (i % j == 0) {
+        dem++;
+      }
+    }
+    if (dem == 1) {
+      danhSachSnt.push(i);
+    }
+  }
+  return danhSachSnt;
 }
-while (input == "c" || input == "r" || input == "u" || input == "d");
+
+console.log(
+  snt()
+);
