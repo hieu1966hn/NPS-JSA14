@@ -37,18 +37,20 @@ Xây dựng chương trình nhập vào tháng => in ra số ngày tương ứng
 
 */
 
-let inputMonth = Number(prompt("Mời người dùng nhập vào tháng"));
+// let inputMonth = Number(prompt("Mời người dùng nhập vào tháng"));
+// let year = Number(prompt("Mời người dùng nhập vào năm"))
+let inputMonth = 5;
 
-switch (inputMonth, year) {
-  case 1 || 3 || 5 || 7 || 8 || 10 || 12:
-    alert(`Tháng ${inputMonth} có 31 ngày`);
+switch (inputMonth) {
+  case 1:
+    console.log(`Tháng ${inputMonth} có 31 ngày`);
     break;
 
-  case 4 || 6 || 9 || 11:
+  case 4:
     alert(`Tháng ${inputMonth} có 30 ngày`);
     break;
 
-  default:
+  case 2:
     /// Kiểm tra năm nhuận để xem tháng 2 có bao nhiêu ngày:
     /*
     Điều kiện kiểm tra năm nhuận:
