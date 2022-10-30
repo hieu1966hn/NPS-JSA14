@@ -39,33 +39,53 @@ Xây dựng chương trình nhập vào tháng => in ra số ngày tương ứng
 
 // let inputMonth = Number(prompt("Mời người dùng nhập vào tháng"));
 // let year = Number(prompt("Mời người dùng nhập vào năm"))
-let inputMonth = 5;
+// let inputMonth = 5;
 
-switch (inputMonth) {
-  case 1:
-    console.log(`Tháng ${inputMonth} có 31 ngày`);
-    break;
+// switch (inputMonth) {
+//   case 1:
+//     console.log(`Tháng ${inputMonth} có 31 ngày`);
+//     break;
 
-  case 4:
-    alert(`Tháng ${inputMonth} có 30 ngày`);
-    break;
+//   case 4:
+//     alert(`Tháng ${inputMonth} có 30 ngày`);
+//     break;
 
-  case 2:
-    /// Kiểm tra năm nhuận để xem tháng 2 có bao nhiêu ngày:
-    /*
-    Điều kiện kiểm tra năm nhuận:
-    1. Năm nhuận là năm chia hết cho 4 và 100
-    2. Năm nhuận là năm chia hết cho 400
-    */
-    if (year % 4 == 0 && year % 100 == 0) {
-      alert(`Tháng ${inputMonth} có 29 ngày`);
-    }
-    else if (year % 400 == 0) {
-      alert(`Tháng ${inputMonth} có 29 ngày`);
-    }
-    else {
-      alert(`Tháng ${inputMonth} có 28 ngày`);
-    }
+//   case 2:
+//     /// Kiểm tra năm nhuận để xem tháng 2 có bao nhiêu ngày:
+//     /*
+//     Điều kiện kiểm tra năm nhuận:
+//     1. Năm nhuận là năm chia hết cho 4 và 100
+//     2. Năm nhuận là năm chia hết cho 400
+//     */
+//     if (year % 4 == 0 && year % 100 == 0) {
+//       alert(`Tháng ${inputMonth} có 29 ngày`);
+//     }
+//     else if (year % 400 == 0) {
+//       alert(`Tháng ${inputMonth} có 29 ngày`);
+//     }
+//     else {
+//       alert(`Tháng ${inputMonth} có 28 ngày`);
+//     }
 
-    break;
-}
+//     break;
+// }
+
+
+
+/*
+Bài tập: Một nhà hàng gặp khó khăn trong việc quản lý menu order. 
+Xây dựng chương trình Order gồm những tính năng sau: 
+
+mặc định: trong menu luôn có 3 món ban đầu là: 
+let menu = ["khoai tây chiên", "lạc luộc", "kim chi"];
+
+Cho người dùng nhập vào: C,R,U,D trong đó:
+- C: Create => Thêm 1 món ăn mới vào menu
+- R: Read => Hiển thị ra những món đã order (trong mảng menu)
+- U: Update => Nhập tên món muốn thay thế (nhập không đúng món bắt nhập lại hoặc thoát nếu không muốn)
+=> "Nhập tên món mới"
+- D: Delete => Nhập tên món muốn delete (nhập không đúng thì nhập lại hoặc thoát ra)
+=> xóa món đó trong menu.
+*/
+
+let menu = ["khoai tây chiên", "lạc luộc", "kim chi"];
