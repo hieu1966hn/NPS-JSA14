@@ -66,7 +66,6 @@ Xây dựng chương trình nhập vào tháng => in ra số ngày tương ứng
 //     else {
 //       alert(`Tháng ${inputMonth} có 28 ngày`);
 //     }
-
 //     break;
 // }
 

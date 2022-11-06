@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <!-- Thẻ thường dùng
+  h1->h6: tiêu đề
+  p: đoạn văn
+  div: đóng khối, nhóm các phần tử trang lại
+  span: viết trên cùng 1 dòng
+  a: đính kèm link
+  b: in đậm chữ
+  i: in nghiêng
+  ul - li: danh sách không có thứ tự
+  ol - li: danh sách có thứ tự
+  form: Thẻ dùng để nhóm các thành phần gửi thông tin đi
+  lable: tiêu đề cho input
+  input: nhập: email/password/ text/ tải file lên/ submit/ checkbox/ date/ radio
+  textarea: Nhập vào thông tin nhưng giữ nguyên form nhập
+  button: submit/...
+
+  Các thẻ block: div, h1-> h6, p, nav, footer, ul, ol, ...
+  Các thẻ inline: span, a,b,i,mark, strong,....
+  -->
+
+  <!-- Thuộc tính CSS đã học:
+  
+  <style>
+    p {
+      margin: auto;
+      background: none;
+      height: auto;
+      width: auto;
+      text-align: center;
+      align-items: center;
+      transition: all;
+      border: 1px solid black;
+      font: 300;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 10px;
+      position: absolute;
+      color: aliceblue;
+    }
+  </style>
+  -->
+
+
+  <!-- Ứng dụng với display flex -->
+  <style>
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      height: 100vh;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .item {
+      background-color: coral;
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      margin: 10px;
+      line-height: 150px;
+      border-radius: 10px;
+    }
+  </style>
+
+  <div class="container">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+    <div class="item">item8</div>
+    <div class="item">item9</div>
+    <div class="item">item10</div>
+    <div class="item">item11</div>
+    <div class="item">item12</div>
+  </div>
+
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
