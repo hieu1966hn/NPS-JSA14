@@ -53,31 +53,16 @@ if (localStorage.menu) {
 do {
   input = prompt("Mời người dùng nhập vào C,R,U,D").trim().toLowerCase();
   if (input == "c") {
-    let newFood = prompt("Mời người dùng nhập vào tên món ăn mới").trim();
-    menu.push(newFood);
-
-    /// Đẩy món ăn mới lên localStorage
-    localStorage.setItem("menu", JSON.stringify(menu))
-    console.log("chạy code");
+    c();
   }
   else if (input == "r") {
     alert(menu)
   }
   else if (input == "u") {
-    let findFood = prompt("Mời người dùng nhập vào tên món ăn muốn update").trim();
-
-    /// Tìm vị trí phần tử trong mảng
-    let numberOfFood = menu.indexOf(findFood);
-    console.log("numberOfFood: ", numberOfFood);
-    menu[numberOfFood] = prompt("Mời người dùng nhập món ăn mới được update");
-    console.log(menu);
-    localStorage.setItem("menu", JSON.stringify(menu));
+    u()
   }
   else if (input == "d") {
-    let foodDelete = prompt("Mời người dùng nhập vào tên món ăn muốn delete").trim();
-    let numberFoodDelete = menu.indexOf(foodDelete);
-    menu.splice(numberFoodDelete, 1);
-    localStorage.setItem("menu", JSON.stringify(menu));
+    d();
   }
   else if (input == "q") {
     break; // thoát khỏi vòng lặp ngay lập tức
@@ -87,3 +72,33 @@ do {
   }
 }
 while (input != "c" && input != "r" && input != "u" && input != "d");
+
+
+/// Hàm create
+function c() {
+  let newFood = prompt("Mời người dùng nhập vào tên món ăn mới").trim();
+  menu.push(newFood);
+
+  /// Đẩy món ăn mới lên localStorage
+  localStorage.setItem("menu", JSON.stringify(menu))
+  console.log("chạy code");
+}
+
+
+function u() {
+  let findFood = prompt("Mời người dùng nhập vào tên món ăn muốn update").trim();
+
+  /// Tìm vị trí phần tử trong mảng
+  let numberOfFood = menu.indexOf(findFood);
+  console.log("numberOfFood: ", numberOfFood);
+  menu[numberOfFood] = prompt("Mời người dùng nhập món ăn mới được update");
+  console.log(menu);
+  localStorage.setItem("menu", JSON.stringify(menu));
+}
+
+function d() {
+  let foodDelete = prompt("Mời người dùng nhập vào tên món ăn muốn delete").trim();
+  let numberFoodDelete = menu.indexOf(foodDelete);
+  menu.splice(numberFoodDelete, 1);
+  localStorage.setItem("menu", JSON.stringify(menu));
+}
