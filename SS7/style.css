@@ -49,3 +49,24 @@
   height: 35vh;
   padding: 80px 50px;
 }
+
+.city-name {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+.weather-state {
+  font-size: 30px;
+}
+
+.weather-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.temperature {
+  font-size: 50px;
+  font-weight: lighter;
+}
+
+/* Còn phần dưới  */
