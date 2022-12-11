@@ -1,4 +1,4 @@
-const APP_ID = '7f73ab274e50ef5f36d4f0fe07f7ed54'
+const APP_ID = '503628701a0938d24cc366e3125f41a1'
 
 
 const searchInput = document.getElementById("search-input");
@@ -27,8 +27,7 @@ const windSpeed = document.querySelector('.wind-speed');
 
 searchInput.addEventListener("change", (event) => {
   // console.log(event.target.value); ////
-  fetch(`https://api.openweathermap.org/data/2.5/
-  weather?q=${event.target.value}&appid=${APP_ID}`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${event.target.value}&appid=${APP_ID}`)
     .then(response => response.json())
     .then((data) => console.log(data))
   ///// request dữ liệu tới server trang openweathermap thông qua 
