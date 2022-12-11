@@ -27,9 +27,16 @@ const windSpeed = document.querySelector('.wind-speed');
 
 searchInput.addEventListener("change", (event) => {
   // console.log(event.target.value); ////
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${event.target.value}&appid=${APP_ID}`)
-    .then(response => response.json())
-    .then((data) => console.log(data))
   ///// request dữ liệu tới server trang openweathermap thông qua 
   // cú pháp fetch
+
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${event.target.value}&appid=${APP_ID}
+  `)
+    .then(response => response.json())
+    .then((data) => {
+      console.log(data)
+
+      cityName.innerHTML = data.name
+
+    })
 })
