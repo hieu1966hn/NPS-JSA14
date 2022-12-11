@@ -30,13 +30,19 @@ searchInput.addEventListener("change", (event) => {
   ///// request dữ liệu tới server trang openweathermap thông qua 
   // cú pháp fetch
 
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${event.target.value}&appid=${APP_ID}
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${event.target.value}&appid=${APP_ID}&units=metric&lang=vi
   `)
     .then(response => response.json())
     .then((data) => {
       console.log(data)
 
-      cityName.innerHTML = data.name
+      cityName.innerHTML = data.name;
+      weatherState.innerHTML = data.weather[0].description;
+
+      /// Icon lát làm
+
+      temperature.innerHTML = data.main.temp
+      weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
 
     })
 })
