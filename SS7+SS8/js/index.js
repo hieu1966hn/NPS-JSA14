@@ -47,6 +47,7 @@ searchInput.addEventListener("change", (event) => {
       sunrise.innerHTML = data.sys.sunrise;
       sunset.innerHTML = data.sys.sunset;
 
-
+      humidity.innerHTML = data.main.humidity;
+      windSpeed.innerHTML = data.wind.speed;
     })
 })
