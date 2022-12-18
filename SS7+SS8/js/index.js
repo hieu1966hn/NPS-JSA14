@@ -44,5 +44,9 @@ searchInput.addEventListener("change", (event) => {
       temperature.innerHTML = data.main.temp
       weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
 
+      sunrise.innerHTML = data.sys.sunrise;
+      sunset.innerHTML = data.sys.sunset;
+
+
     })
 })
